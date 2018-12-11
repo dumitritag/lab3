@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DAC710B-4138-462C-83D6-AD2470F1DEB9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChainOfResponsability\Chain.cs" />
+    <Compile Include="ChainOfResponsability\DoctorA.cs" />
+    <Compile Include="ChainOfResponsability\DoctorB.cs" />
+    <Compile Include="ChainOfResponsability\DoctorC.cs" />
+    <Compile Include="ChainOfResponsability\Investigate.cs" />
+    <Compile Include="Command\ActionListenerCommand.cs" />
+    <Compile Include="Command\ActionOpen.cs" />
+    <Compile Include="Command\ActionSave.cs" />
+    <Compile Include="Command\MedicalRecord.cs" />
+    <Compile Include="Command\MenuOptions.cs" />
+    <Compile Include="Observer\Doctor.cs" />
+    <Compile Include="Observer\Nurse.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Pacient.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\Empty.cs" />
+    <Compile Include="State\Full.cs" />
+    <Compile Include="State\NotFull.cs" />
+    <Compile Include="State\Room.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="Strategy\Card.cs" />
+    <Compile Include="Strategy\Chesh.cs" />
+    <Compile Include="Strategy\Consultation.cs" />
+    <Compile Include="Strategy\ConsultationList.cs" />
+    <Compile Include="Strategy\PaymentStrategy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
